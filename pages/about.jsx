@@ -4,8 +4,7 @@ import { MainLayout } from '../components/layouts/MainLayout'
 
 export default function AboutPage() {
   return(
-    <MainLayout>
-      <DarkLayout>
+    <>
         <h1>About Page</h1>
 
         <h1 className="title">
@@ -16,11 +15,19 @@ export default function AboutPage() {
           Get started by editing{' '}
           <code className={'code'}>pages/about.jsx</code>
         </p>
-      </DarkLayout>
-    </MainLayout>
+    </>
 
   )
 }
 
 
 
+AboutPage.getLayout = function getLayout( page ) { 
+  return(
+    <MainLayout>
+      <DarkLayout>
+        { page }
+      </DarkLayout>
+    </MainLayout>
+  )
+}
