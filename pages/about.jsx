@@ -1,38 +1,26 @@
-import Head from 'next/head'
 import Link from 'next/link'
-import { NavBar } from '../components/NavBar'
-import styles from '../styles/Home.module.css'
+import { DarkLayout } from '../components/layouts/DarkLayout'
+import { MainLayout } from '../components/layouts/MainLayout'
 
 export default function AboutPage() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>About - Giancarlo</title>
-        <meta name="description" content="About Page" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <NavBar/>
-
-
-      <main className={styles.main}>
-
+  return(
+    <MainLayout>
+      <DarkLayout>
         <h1>About Page</h1>
 
-        <h1 className={styles.title}>
-          {/* Ir a <a href="/">Home</a> */}
+        <h1 className="title">
           Ir a <Link href="/">Home</Link>
         </h1>
 
-        <p className={styles.description}>
+        <p className={'description'}>
           Get started by editing{' '}
-          <code className={styles.code}>pages/about.jsx</code>
+          <code className={'code'}>pages/about.jsx</code>
         </p>
+      </DarkLayout>
+    </MainLayout>
 
-        
-      </main>
-
-
-    </div>
   )
 }
+
+
+
