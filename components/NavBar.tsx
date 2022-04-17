@@ -21,6 +21,10 @@ const menuItems = [
       text: 'Pricing',
       href: '/pricing'
   },
+  {
+      text: 'Products',
+      href: '/products'
+  },
 ];
 
 export const NavBar:FC = () => {
